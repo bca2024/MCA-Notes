@@ -397,57 +397,46 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 # 5. Write a JavaScript function that checks whether a passed string is palindrome or not in a HTML form
 
 ```html
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Palindrome Checker</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 50px;
-      }
-      #result {
-        margin-top: 20px;
-        font-weight: bold;
-      }
-    </style>
-  </head>
-  <body>
-    <h1>Palindrome Checker</h1>
-    <form id="palindromeForm">
-      <label for="inputString">Enter a string:</label>
-      <input type="text" id="inputString" required />
-      <button type="submit">Check</button>
+</head>
+<body>
+    <form id="palindromeForm" onsubmit="checkPalindrome(event)">
+        <label for="inputString">Enter a string:</label>
+        <input type="text" id="inputString" required />
+        <button type="submit">Check</button>
     </form>
-
-    <div id="result"></div>
+    <h2 id="result"></h2>
 
     <script>
-      function isPalindrome(str) {
-        // Remove non-alphanumeric characters and convert to lowercase
-        const cleanedStr = str.replace(/[^A-Za-z0-9]/g, "").toLowerCase();
-        const reversedStr = cleanedStr.split("").reverse().join("");
-        return cleanedStr === reversedStr;
-      }
-
-      document
-        .getElementById("palindromeForm")
-        .addEventListener("submit", function (event) {
-          event.preventDefault(); // Prevent form submission
-          const inputString = document.getElementById("inputString").value;
-          const resultDiv = document.getElementById("result");
-
-          if (isPalindrome(inputString)) {
-            resultDiv.textContent = `"${inputString}" is a palindrome.`;
-            resultDiv.style.color = "green";
-          } else {
-            resultDiv.textContent = `"${inputString}" is not a palindrome.`;
-            resultDiv.style.color = "red";
-          }
-        });
+        function checkPalindrome(event) {
+            // Prevent the default form submission
+            event.preventDefault();
+            
+            // Get the input value
+            const inputString = document.getElementById('inputString').value;
+            
+            // Check if the input string is a palindrome
+            const revStr = inputString.split('').reverse().join('');
+            const isPalindrome = (revStr === inputString);
+            
+            // Display the result
+            let result = document.getElementById('result')
+            if (isPalindrome) {
+                result.innerText = inputString + " is a palindrome."
+            } else {
+                result.innerText = inputString + " is not a palindrome."
+            }
+        }
     </script>
-  </body>
+</body>
 </html>
+
 ```
 
 ![alt text](<../img/Screenshot 2024-11-28 234420.png>)
