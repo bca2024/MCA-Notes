@@ -1215,4 +1215,4 @@ console.log(is_array([1, 2, 4, 0]));
 
 # 22. Write a java script program to sort 50 natural numbers.
 
-_**already answered in no(5) question**_
+_**already answered in no(12.a) question**_
