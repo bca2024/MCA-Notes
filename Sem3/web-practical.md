@@ -1158,13 +1158,7 @@ _Current time is : 2 PM : 30 : 38_
   <body>
     <h2>Hello</h2>
     <h3>World</h3>
-    <button onclick="printWindow()">Print this page</button>
-
-    <script>
-      function printWindow() {
-        window.print();
-      }
-    </script>
+    <button onclick="window.print()">Print this page</button>
   </body>
 </html>
 ```
