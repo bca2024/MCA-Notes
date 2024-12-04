@@ -2,8 +2,6 @@
 
 ## Practical
 
-### Web
-
-[Web Practical](Sem3/web-practical.md)
-
 ### ML 
+
+[ML Practical](Sem3/ML-practical.md)
