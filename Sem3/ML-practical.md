@@ -72,8 +72,6 @@ x.head()
 y = data.Salary
 y.head()
 
-train_x,test_x,train_y,test_y = train_test_split(x,y,train_size=0.8)
-
 lin = LinearRegression()
 lin.fit(x,y)
 
