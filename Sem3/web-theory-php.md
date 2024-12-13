@@ -103,3 +103,52 @@ GeeksforGeeks
 */
 ?>
 ```
+
+# sort
+
+```php
+$cars = array("Volvo", "BMW", "Toyota");
+sort($cars);
+
+// reverse sort
+rsort($cars);
+```
+
+# connection using PDO
+
+```php
+<?php
+try{
+$servername = "localhost";
+$username = "username";
+$password = "password";
+
+$conn = new PDO("mysql:host=$servername;dbname=myDB", $username, $password);
+echo "connection successful"
+}
+catch (PDOException $e) {
+    echo "Database not connected: " . $e->getMessage();
+}
+?>
+```
+
+# connection using musqli
+
+```php
+<?php
+$server = "localhost";
+$user = "root";
+$password = "";
+$db = "testdb";
+$conn = "";
+
+$conn = mysqli_connect($server, $user, $password, $db);
+
+if(!$conn){
+    echo "database not connected";
+}
+else{
+    echo "connection successful";
+}
+?>
+```
