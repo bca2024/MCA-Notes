@@ -885,29 +885,30 @@ console.log(`The GCD of ${num1} and ${num2} is: ${greatestCommonDivisor}`);
 ```js
 // Function to generate an array of random natural numbers
 function generateNumbers(count, max) {
-  const numbers = [];
-  for (let i = 0; i < count; i++) {
-    // Generate a random natural number between 1 and max
-    const randomNum = Math.floor(Math.random() * max) + 1;
-    numbers.push(randomNum);
+    const numbers = [];
+    for (let i = 0; i < count; i++) {
+      // Generate a random natural number between 1 and max
+      const randomNum = Math.floor(Math.random() * max) + 1;
+      numbers.push(randomNum);
+    }
+    return numbers;
   }
-  return numbers;
-}
-
-// Function to sort an array of numbers
-function sortNumbers(arr) {
-  return [...arr].sort((a, b) => a - b);
-}
-
-// Generate 50 random natural numbers
-const randomNumbers = generateNumbers(50, 100); // Adjust max as needed
-
-// Sort the numbers
-const sortedNumbers = sortNumbers(randomNumbers);
-
-// Output the sorted numbers
-console.log("Random Natural Numbers:", randomNumbers);
-console.log("Sorted Natural Numbers:", sortedNumbers);
+  
+  // Function to sort an array of numbers
+  function sortNumbers(arr) {
+    const anotherArr = arr.sort((a, b) => a - b);
+    return anotherArr;
+  }
+  
+  // Generate 50 random natural numbers
+  const randomNumbers = generateNumbers(50, 100); // Adjust max as needed
+  
+  // Sort the numbers
+  const sortedNumbers = sortNumbers(randomNumbers);
+  
+  // Output the sorted numbers
+  console.log("Random Natural Numbers:", randomNumbers);
+  console.log("Sorted Natural Numbers:", sortedNumbers);
 ```
 
 ![alt text](<../img/Screenshot 2024-11-29 201344.png>)
