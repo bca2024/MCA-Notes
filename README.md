@@ -4,6 +4,8 @@
 
 IOT - [IOT Theory](Sem3/IOT-Theory.md)
 
+Web- [JS](Sem3/web-theory-js.md)
+
 ## Practical
 
 ### Web
