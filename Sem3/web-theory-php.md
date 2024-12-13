@@ -25,28 +25,14 @@ _**Zend Engine**_
 **Widely Used** - Big platforms like WordPress and Facebook use PHP, making it a trusted choice for developers.
 
 
-# 3. `$_SESSION` in PHP:
+# 3. $_SESSION in PHP:
 
-`$_SESSION` is a **superglobal variable** in PHP used to store data across multiple pages during a user's visit to a website. 
+`$_SESSION` is a **superglobal variable** in PHP used to store data across multiple pages during a user's visit to a website. A PHP session is used to store data on a server rather than the computer of the user.
 
-### Key Points:
-1. **What It Does**  
-   - It keeps track of user information (like login status or preferences) as they navigate through your site.
-   - The data is stored on the server, and each user has a unique **session ID**.
+A "session" in web development is used to maintain user information across multiple pages within a website
 
-2. **How It Works**  
-   - You start a session using `session_start()`.
-   - You can then store data in the `$_SESSION` variable like this:
-     ```php
-     $_SESSION['username'] = 'John';
-     ```
-   - The data remains available until the session ends (e.g., when the user logs out or closes the browser).
 
-3. **Why Use It?**  
-   - Unlike cookies, session data is not stored on the user's computer, making it more secure for sensitive information.
-   - Useful for tasks like keeping a user logged in or managing a shopping cart.
-
-4. **Example:**
+ **Example:**
    ```php
    <?php
    // Start the session
@@ -61,6 +47,59 @@ _**Zend Engine**_
    ?>
    ```
 
-### Analogy:  
-Imagine you’re at a theme park, and you get a wristband when you enter (session ID). The park keeps your information (like tickets bought, food orders, etc.) in their system linked to your wristband. When you leave the park, all your data is cleared. This is how `$_SESSION` works!
 
+
+# 4. what is PEAR?
+
+PEAR means **PHP Extension and Application Repository**
+
+# 5. Rules for naming php variable
+
+- A variable starts with the $ sign, followed by the name of the variable
+- A variable name must start with a letter or the underscore character
+- A variable name cannot start with a number
+- A variable name can only contain alpha-numeric characters and underscores (A-z, 0-9, and _ )
+- Variable names are case-sensitive ($age and $AGE are two different variables)
+
+# 6. 
+
+
+
+
+
+
+
+
+
+
+# $ vs $$ in php.
+or
+# Difference between $_message and $$_message.
+
+The **$\_message** (single dollar) is a normal variable with the name \_message that stores any value like string, integer, float, etc.
+
+The **$$\_message** (double dollar) is a reference variable that stores the value of anoher variable inside it.
+
+```php
+<?php
+$name = "Ankita";
+$her_name = "name";
+
+echo $her_name . "<br>";
+echo $$her_name . "<br>";
+
+// another example
+$var = "Hello"; 
+$Hello = "GeeksforGeeks"; 
+
+echo $var . "<br>"; 
+echo $$var; 
+
+/* OUTPUT =  
+name
+Ankita
+Hello
+GeeksforGeeks
+*/
+?>
+```
