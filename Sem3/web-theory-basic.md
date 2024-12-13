@@ -80,10 +80,10 @@ output:
         body {
             background: repeating-linear-gradient(
                 to right,
-                #fff,
-                #fff 70px,
-                #111 70px,
-                #111 150px
+                white 0px,  /*px at white starts*/
+                white 50px, /*px at white end*/
+                black 50px, /*px at black starts*/
+                black 100px /*px at black end*/
             );
         }
     </style>
