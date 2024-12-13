@@ -92,30 +92,6 @@ Assignment operators assign values to JavaScript variables.
 |%=|x %= y|x = x % y|
 |**=|x **= y|x = x ** y|
 
-## Shift Assignment Operators
-
-|Operator|Example|Same As|
-|---|---|---|
-|<<=|x <<= y|x = x << y|
-|>>=|x >>= y|x = x >> y|
-|>>>=|x >>>= y|x = x >>> y|
-
-## Bitwise Assignment Operators
-
-|Operator|Example|Same As|
-|---|---|---|
-|&=|x &= y|x = x & y|
-|^=|x ^= y|x = x ^ y|
-|\|=|x \|= y|x = x \| y|
-
-## Logical Assignment Operators
-
-|Operator|Example|Same As|
-|---|---|---|
-|&&=|x &&= y|x = x && (x = y)|
-|\|=|x \|= y|x = x \| (x = y)|
-|??=|x ??= y|x = x ?? (x = y)|
-
 # JavaScript Data Types
 
 ### JavaScript defines 7 types of primitive data types:
